@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	margin: 0;
+	position: relative;
+}
+h1 {
+	margin: 10px 25px;
+}
+
+
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(100, 100, 100, .7);
+}
+
+
+#modal-text {
+	background-color: white;
+	text-align: center;
+	padding: 1em 2em;
+	width: 80vw;
+	margin: 20vh auto;
+	border-radius: 5px;
+}
+
+#modal-close {
+	display: block;
+	float: left;
+}
+
+.hidden {
+	display: none;
+}
+
+#employee-profiles {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 25px;
+	margin: 25px;
+}
+
+img {
+	border-radius: 50%;
+	min-height: 75px;
+}
+
+#employee-city,
+#employee-email,
+#employee-cell-phone,
+#employee-address,
+#employee-birthday {
+	font-weight: 200;
+}
+
+.employee-name,
+.email,
+.city {
+	font-size: .75em;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.email,
+.city {
+	font-weight: 200;
+}
+
+	.employee-info {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		grid-template-rows: 20px 20px 20px;
+		border: 2px solid #ccc;
+		border-radius: 10px;
+		padding: 15px;
+		padding-bottom: 30px
+	}
+
+
+@media (min-width: 1024px) {
+	
+	#modal-text {
+    width: 40vw;
+}
+	
+	#employee-profiles {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 25px;
+	margin: 25px;
+	}
+
+	.employee-info {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		grid-template-rows: 20px 20px 20px;
+		border: 2px solid #ccc;
+		border-radius: 10px;
+		padding: 15px;
+		padding-bottom: 30px
+	}
+}
