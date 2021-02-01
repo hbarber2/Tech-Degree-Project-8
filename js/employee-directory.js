@@ -1,4 +1,4 @@
-const randomUser = 'https://cors-anywhere.herokuapp.com/https://randomuser.me/api/?results=12';
+const randomUser = 'https://randomuser.me/api/?results=12';
 const employeeProfilesContainer = document.getElementById('employee-profiles');
 const profileDivs = document.getElementsByClassName('employee-info');
 const closeButton = document.getElementById('modal-close');
