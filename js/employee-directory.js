@@ -35,10 +35,8 @@ function generateEmployeeProfile(json) {
 			<p class="city">${city}</p>
 			`;
 	
-
-
-	
 		profile.addEventListener('click', () => {
+			overlay.classList.remove('hidden');
 			let profileImg = document.getElementById('profile-pic');
 			let name = document.getElementById('employee-name');
 			let address = document.getElementById('employee-address');
@@ -48,7 +46,7 @@ function generateEmployeeProfile(json) {
 			let cellPhone = document.getElementById('employee-cell-phone');
 			let birthday = new Date(employees[index].dob.date);
 
-			overlay.classList.remove('hidden');
+
 			profileImg.src = employee.picture.large
 			name.innerHTML = employee.name.first + ' ' + employee.name.last;
 			employeeCity.innerHTML = employee.location.city
@@ -57,7 +55,6 @@ function generateEmployeeProfile(json) {
 			dob.innerHTML = birthday.getMonth() + '/' + birthday.getDate() + '/' + birthday.getFullYear()
 			cellPhone.innerHTML = employee.cell
 				});
-
 		});
 	};
 
